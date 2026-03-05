@@ -18,7 +18,7 @@ $targetRG = Get-AzResourceGroup | Where-Object { $_.ResourceGroupName -match "RG
 if ($targetRG) {
     # Tikriname regioną (Turi būti Norway East pagal 30 punktą)
     if ($targetRG.Location -eq "norwayeast") {
-        $rgText  = "[OK] - $($targetRG.ResourceGroupName) (Norway East)"
+        $rgText  = "[OK] - RG-LAB03-BARAD (Norway East)"
         $rgColor = "Green"
     } else {
         $rgText  = "[DĖMESIO] - $($targetRG.ResourceGroupName) (Yra: $($targetRG.Location), Reikėjo: norwayeast)"
